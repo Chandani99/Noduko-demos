@@ -1,0 +1,14 @@
+spring.application.name=sb-form-based-authentication-app
+
+# Google OAuth2 settings
+spring.security.oauth2.client.registration.github.client-id=Ov23li5f5orFg4ilCoqe
+spring.security.oauth2.client.registration.github.client-secret=c063d27d4a9726a08cb16b8713c263ef4f2c8e0f
+#spring.security.oauth2.client.registration.google.scope=profile,email
+#spring.security.oauth2.client.registration.google.redirect-uri={baseUrl}/login/oauth2/code/{registrationId}
+#spring.security.oauth2.client.registration.google.client-name=Google
+#
+## OAuth2 provider settings
+spring.security.oauth2.client.provider.google.authorization-uri=https://accounts.google.com/o/oauth2/auth
+spring.security.oauth2.client.provider.google.token-uri=https://oauth2.googleapis.com/token
+spring.security.oauth2.client.provider.google.user-info-uri=https://www.googleapis.com/oauth2/v3/userinfo
+spring.security.oauth2.client.provider.google.user-name-attribute=sub

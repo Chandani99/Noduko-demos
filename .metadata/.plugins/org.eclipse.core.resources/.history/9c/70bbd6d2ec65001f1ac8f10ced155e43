@@ -1,0 +1,5 @@
+package com.noduco.model;
+
+public class Book {
+
+}

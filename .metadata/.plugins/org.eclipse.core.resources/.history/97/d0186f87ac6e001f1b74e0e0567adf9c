@@ -1,0 +1,5 @@
+package com.noduco.config;
+
+public class LembdaConfig {
+
+}

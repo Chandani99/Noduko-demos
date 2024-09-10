@@ -1,0 +1,29 @@
+package com.noduco.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicAWSCredentials;
+
+import software.amazon.awssdk.auth.credentials.AwsCredentials;
+
+@Configuration
+public class AwsS3Config {
+	
+	@Value("${aws.accessKeyId}")
+	private String accessKey;
+	
+	@Value("${aws.secretKey}")
+	private String secrateKey;
+	
+	@Value("${aws.region}")
+	private String region;
+	
+	
+	public AWSCredentials awsCrredientials() {
+		AWSCredentials credientials = new BasicAWSCredentials(accessKey, secrateKey);
+		return credientials;
+	}
+
+}

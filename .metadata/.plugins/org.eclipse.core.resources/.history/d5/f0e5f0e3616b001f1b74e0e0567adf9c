@@ -1,0 +1,22 @@
+package com.noduco.configs;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+public class OAuth2Config {
+	@Bean
+	public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception{
+		
+		 http
+         .authorizeHttpRequests(authz -> authz
+             .requestMatchers("/", "/login**", "/error**").permitAll()
+             .anyRequest().authenticated())
+         .oauth2Login(oauth2 -> oauth2
+                 .loginPage("/oauth2/authorization/github")); // Enable OAuth2 login
+
+     return http.build();
+	
+	}
+}

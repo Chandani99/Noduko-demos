@@ -1,0 +1,4 @@
+FROM openjdk:17
+EXPOSE 8080
+ADD target/k8scruddemo.jar k8scruddemo.jar
+ENTRYPOINT ["java","-jar","/k8scruddemo.jar"]

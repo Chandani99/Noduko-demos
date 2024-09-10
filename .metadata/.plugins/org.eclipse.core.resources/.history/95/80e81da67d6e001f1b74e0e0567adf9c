@@ -1,0 +1,8 @@
+spring.application.name=sb-aws-SNS-app
+server.port=8090
+
+#AWS credientials..
+
+aws.accessKeyId=AKIAU6GDZ6WSUUURZWUE
+aws.secretKey=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
+aws.region=us-east-1
