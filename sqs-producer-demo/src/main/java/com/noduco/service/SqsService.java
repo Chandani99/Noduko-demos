@@ -1,0 +1,63 @@
+package com.noduco.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate;
+import org.springframework.stereotype.Service;
+import software.amazon.awssdk.services.sqs.SqsClient;
+import software.amazon.awssdk.services.sqs.model.CreateQueueRequest;
+import software.amazon.awssdk.services.sqs.model.CreateQueueResponse;
+import software.amazon.awssdk.services.sqs.model.DeleteQueueRequest;
+import software.amazon.awssdk.services.sqs.model.QueueAttributeName;
+@Service
+public class SqsService {
+	
+	@Autowired
+	private SqsClient sqsClient;
+	@Autowired
+    private QueueMessagingTemplate queueMessagingTemplate;
+	
+	// Create an SQS queue
+    public String createQueue(String queueName) {
+        CreateQueueRequest createQueueRequest = CreateQueueRequest.builder()
+                .queueName(queueName)
+                .attributes(null)
+                .build();
+
+        CreateQueueResponse createQueueResponse = sqsClient.createQueue(createQueueRequest);
+        return createQueueResponse.queueUrl();
+    }
+    
+    // Delete an SQS queue
+    public void deleteQueue(String queueUrl) {
+        DeleteQueueRequest deleteQueueRequest = DeleteQueueRequest.builder()
+                .queueUrl(queueUrl)
+                .build();
+
+        sqsClient.deleteQueue(deleteQueueRequest);
+    }
+
+//    To create FIFO Queue wit attributes
+    public String createFIFOQueue(String queueName) {
+        Map<QueueAttributeName, String> attributes = new HashMap<>();
+        attributes.put(QueueAttributeName.VISIBILITY_TIMEOUT, "60");
+        attributes.put(QueueAttributeName.FIFO_QUEUE, "true");
+        attributes.put(QueueAttributeName.DELAY_SECONDS, "10");
+        attributes.put(QueueAttributeName.MESSAGE_RETENTION_PERIOD, "86400");// Optional attributes
+
+        CreateQueueRequest createQueueRequest = CreateQueueRequest.builder()
+                .queueName(queueName.concat(".fifo"))
+                .attributes(attributes)
+                .build();
+
+        CreateQueueResponse createQueueResponse = sqsClient.createQueue(createQueueRequest);
+        return createQueueResponse.queueUrl();
+    }
+
+	    public String sendMessage(String queueUrl, String message) {
+	        queueMessagingTemplate.convertAndSend(queueUrl, message);
+	       return "Message sent to SQS: " + message;
+	    }
+}

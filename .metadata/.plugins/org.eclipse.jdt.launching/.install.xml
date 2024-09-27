@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
     <entry loc="/home/noduco-dev/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_22.0.1.v20240426-1149" stamp="1718277538658"/>
-    <entry loc="/usr/lib/jvm/java-8-openjdk-amd64" stamp="1719844074500"/>
-    <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1719459771240"/>
+    <entry loc="/usr/lib/jvm/java-8-openjdk-amd64" stamp="1726554367557"/>
+    <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1726554154292"/>
     <entry loc="/home/noduco-dev/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_22.0.1.v20240426-1149/jre" stamp="1718277538658"/>
 </dirs>
