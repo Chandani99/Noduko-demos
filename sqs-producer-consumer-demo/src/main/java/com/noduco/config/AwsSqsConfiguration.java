@@ -1,9 +1,11 @@
 package com.noduco.config;
 
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
@@ -13,21 +15,7 @@ import software.amazon.awssdk.services.sqs.SqsClient;
 
 @Configuration
 public class AwsSqsConfiguration {
-//	private String accessKey;
-//	private String secrateKey;
-	
-	
-//	@Bean
-//	public QueueMessagingTemplate mqt(AmazonSQSAsync asa) {
-//		return new QueueMessagingTemplate(asa());
-//	}
-//
-//
-//	private AmazonSQSAsync asa() {
-//		return null;
-//		// TODO Auto-generated method stub
-//		
-//	}
+
 	
 	 @Bean
 	    public SqsClient sqsClient(@Value("${aws.accessKeyId}") String accessKeyId,
@@ -41,8 +29,38 @@ public class AwsSqsConfiguration {
 	        .build();
 	    	
 	    }
-
+	 
+//	 @Bean
+//    @Primary
+//    public AmazonSQSAsync amazonSQSAsync(@Value("${aws.accessKeyId}") String accessKeyId,
+//     @Value("${aws.secretKey}") String secretKey,
+//     @Value("${aws.region}") String region) {
+//	        return AmazonSQSAsyncClientBuilder.standard()
+//	            .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration("http://localhost:8889", region))
+//	            .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKeyId, secretKey)))
+//	            .build();
+//	    }
+//
+//	   
+////	 @Bean
+////	    public SimpleMessageListenerContainer simpleMessageListenerContainer(
+////	            AmazonSQSAsync amazonSQSAsync) {
+////
+////	        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+////	        container.setAmazonSqs(amazonSQSAsync);
+////	        
+////	        container.se;
+////	        .setQueueNames(Arrays.asList("YOUR_QUEUE_URL"));   
+////
+////	        container.setMessageListener(new SQSMessageReceiver1());
+////	        return container;
+////	    }
+//	
+//	
+//	    @Bean
+//	    public QueueMessagingTemplate queueMessagingTemplate(AmazonSQSAsync sqsClient) {
+//	        return new QueueMessagingTemplate(sqsClient);
+//	    }
+	    
 	   
-  
-	
 }
