@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.amazonaws.services.sqs.AmazonSQSAsync;
 
 import software.amazon.awssdk.services.sqs.SqsClient;
+import software.amazon.awssdk.services.sqs.model.DeleteMessageRequest;
 import software.amazon.awssdk.services.sqs.model.Message;
 import software.amazon.awssdk.services.sqs.model.ReceiveMessageRequest;
 
@@ -39,15 +40,20 @@ public class SQSMessageReceiver1  {
 	            System.out.println("Message received: " + message.body());
 
 	            // Process the message
+	            
+//	            Message acknowledge
+	            acknowledgeMessage(message);
 
-	            // Delete the message from the queue
-//	            DeleteMessageRequest deleteRequest = DeleteMessageRequest.builder()
-//	                    .queueUrl(queueUrl)
-//	                    .receiptHandle(message.receiptHandle())
-//	                    .build();
-	//
-//	            sqsClient.deleteMessage(deleteRequest);
 	        }
+	    }
+	    
+	    private void acknowledgeMessage(Message message) {
+	        DeleteMessageRequest deleteRequest = DeleteMessageRequest.builder()
+	                .queueUrl(queueUrl)
+	                .receiptHandle(message.receiptHandle())
+	                .build();
+	        sqsClient.deleteMessage(deleteRequest);
+	        System.out.println("Acknowledged message: " + message.body());
 	    }
 	    
 }
