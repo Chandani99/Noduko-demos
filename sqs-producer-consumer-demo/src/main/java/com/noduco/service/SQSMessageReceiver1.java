@@ -42,20 +42,12 @@ public class SQSMessageReceiver1  {
 	            // call method to process the message
     
 	            // Acknowledge (delete) the message after processing
-                acknowledgeMessage(message);
-
+                
 	        }
 	        
 	        
 	    }
-	    private void acknowledgeMessage(Message message) {
-	        DeleteMessageRequest deleteRequest = DeleteMessageRequest.builder()
-	                .queueUrl(queueUrl)
-	                .receiptHandle(message.receiptHandle())
-	                .build();
-	        sqsClient.deleteMessage(deleteRequest);
-	        System.out.println("Acknowledged message: " + message.body());
-	    }
+	   
 	    
 	    
 	    
