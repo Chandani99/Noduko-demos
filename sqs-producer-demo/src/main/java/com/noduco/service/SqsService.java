@@ -41,14 +41,22 @@ public class SqsService {
 
 //    To create FIFO Queue wit attributes
     public String createFIFOQueue(String queueName) {
+    	
+            queueName += ".fifo";
+        
+    	
+//    	System.out.println("======="+queueName);
+    	
         Map<QueueAttributeName, String> attributes = new HashMap<>();
-        attributes.put(QueueAttributeName.VISIBILITY_TIMEOUT, "60");
+        
         attributes.put(QueueAttributeName.FIFO_QUEUE, "true");
+        attributes.put(QueueAttributeName.CONTENT_BASED_DEDUPLICATION, "true");
+        attributes.put(QueueAttributeName.VISIBILITY_TIMEOUT, "60");
         attributes.put(QueueAttributeName.DELAY_SECONDS, "10");
         attributes.put(QueueAttributeName.MESSAGE_RETENTION_PERIOD, "86400");// Optional attributes
 
         CreateQueueRequest createQueueRequest = CreateQueueRequest.builder()
-                .queueName(queueName.concat(".fifo"))
+                .queueName(queueName)
                 .attributes(attributes)
                 .build();
 

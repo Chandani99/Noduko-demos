@@ -7635,3 +7635,264 @@ java.lang.IllegalStateException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1454)
+!SESSION 2024-10-04 12:21:17.405 -----------------------------------------------
+eclipse.buildId=4.23.0.202406070037
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-04 12:21:20.638
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-04 12:22:59.157
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-04 12:22:59.799
+!MESSAGE Logback config file: /home/noduco-dev/Documents/Java-Projects/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-10-04 12:23:00.264
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-10-04 12:23:00.264
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-10-04 12:23:00.595
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-10-04 12:23:00.595
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-10-04 12:23:03.513
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/home/noduco-dev/Downloads/spring-tool-suite-4-4.23.0.RELEASE-e4.32.0-linux.gtk.x86_64/sts-4.23.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.3.v20240426-1530/jre/bin/java
+-cp
+/home/noduco-dev/Downloads/spring-tool-suite-4-4.23.0.RELEASE-e4.32.0-linux.gtk.x86_64/sts-4.23.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.55.0.202406062354/servers/spring-boot-language-server/BOOT-INF/classes:/home/noduco-dev/Downloads/spring-tool-suite-4-4.23.0.RELEASE-e4.32.0-linux.gtk.x86_64/sts-4.23.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.55.0.202406062354/servers/spring-boot-language-server/BOOT-INF/lib/*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:/home/noduco-dev/Downloads/spring-tool-suite-4-4.23.0.RELEASE-e4.32.0-linux.gtk.x86_64/sts-4.23.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.55.0.202406062354/servers/spring-boot-language-server/BOOT-INF/classes/application.properties
+-XX:ErrorFile=/home/noduco-dev/Documents/Java-Projects/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1728024783513
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:03.514
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-10-04 12:23:03.525
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 52450
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:04.997
+!MESSAGE Boot project ADDED: admin
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.001
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.003
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.004
+!MESSAGE Boot project ADDED: k8s-mongo-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.004
+!MESSAGE Boot project ADDED: k8sCRUDDemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.004
+!MESSAGE Boot project ADDED: message-consumer-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.006
+!MESSAGE Boot project ADDED: message-producer-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.006
+!MESSAGE Boot project ADDED: mongoTransactionDemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.007
+!MESSAGE Boot project ADDED: mongoWithSb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.007
+!MESSAGE Boot project ADDED: my-spring-security-final-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.008
+!MESSAGE Boot project ADDED: sb-aws-S3-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.008
+!MESSAGE Boot project ADDED: sb-aws-SNS-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.008
+!MESSAGE Boot project ADDED: sb-aws-lambda-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.009
+!MESSAGE Boot project ADDED: sb-aws-s3-app2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.009
+!MESSAGE Boot project ADDED: sb-aws-sqs-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.009
+!MESSAGE Boot project ADDED: sb-awsS3-presignedURL-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.010
+!MESSAGE Boot project ADDED: sb-basic-authentication-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.010
+!MESSAGE Boot project ADDED: sb-custome-API-security-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.010
+!MESSAGE Boot project ADDED: sb-database-rollbased-user-authentication
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.011
+!MESSAGE Boot project ADDED: sb-form-based-authentication-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.011
+!MESSAGE Boot project ADDED: sb-inmemory-user-authentication
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.011
+!MESSAGE Boot project ADDED: sb-methodlevel-rollbased-user-authentication
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.012
+!MESSAGE Boot project ADDED: sb-oauth2-authentication-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.012
+!MESSAGE Boot project ADDED: sb-security-rollbased-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.012
+!MESSAGE Boot project ADDED: security
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.013
+!MESSAGE Boot project ADDED: sqs-producer-consumer-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.013
+!MESSAGE Boot project ADDED: sqs-producer-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 12:23:05.013
+!MESSAGE Boot project ADDED: user
+!SESSION 2024-10-04 13:19:09.913 -----------------------------------------------
+eclipse.buildId=4.23.0.202406070037
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-04 13:19:11.739
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-04 13:19:15.402
+!MESSAGE Logback config file: /home/noduco-dev/Documents/Java-Projects/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-10-04 13:19:15.835
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-10-04 13:19:15.835
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-10-04 13:19:16.195
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-10-04 13:19:16.196
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-10-04 13:19:18.978
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+/home/noduco-dev/Downloads/spring-tool-suite-4-4.23.0.RELEASE-e4.32.0-linux.gtk.x86_64/sts-4.23.0.RELEASE/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.3.v20240426-1530/jre/bin/java
+-cp
+/home/noduco-dev/Downloads/spring-tool-suite-4-4.23.0.RELEASE-e4.32.0-linux.gtk.x86_64/sts-4.23.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.55.0.202406062354/servers/spring-boot-language-server/BOOT-INF/classes:/home/noduco-dev/Downloads/spring-tool-suite-4-4.23.0.RELEASE-e4.32.0-linux.gtk.x86_64/sts-4.23.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.55.0.202406062354/servers/spring-boot-language-server/BOOT-INF/lib/*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:/home/noduco-dev/Downloads/spring-tool-suite-4-4.23.0.RELEASE-e4.32.0-linux.gtk.x86_64/sts-4.23.0.RELEASE/plugins/org.springframework.tooling.boot.ls_1.55.0.202406062354/servers/spring-boot-language-server/BOOT-INF/classes/application.properties
+-XX:ErrorFile=/home/noduco-dev/Documents/Java-Projects/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1728028158978
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:18.979
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-10-04 13:19:18.989
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 56003
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:19.999
+!MESSAGE Boot project ADDED: admin
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.000
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.001
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.013
+!MESSAGE Boot project ADDED: k8s-mongo-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.026
+!MESSAGE Boot project ADDED: k8sCRUDDemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.042
+!MESSAGE Boot project ADDED: message-consumer-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.053
+!MESSAGE Boot project ADDED: message-producer-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.063
+!MESSAGE Boot project ADDED: mongoTransactionDemo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.072
+!MESSAGE Boot project ADDED: mongoWithSb
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.079
+!MESSAGE Boot project ADDED: my-spring-security-final-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.084
+!MESSAGE Boot project ADDED: sb-aws-S3-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.090
+!MESSAGE Boot project ADDED: sb-aws-SNS-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.094
+!MESSAGE Boot project ADDED: sb-aws-lambda-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.099
+!MESSAGE Boot project ADDED: sb-aws-s3-app2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.100
+!MESSAGE Boot project ADDED: sb-aws-sqs-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.104
+!MESSAGE Boot project ADDED: sb-awsS3-presignedURL-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.109
+!MESSAGE Boot project ADDED: sb-basic-authentication-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.113
+!MESSAGE Boot project ADDED: sb-custome-API-security-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.139
+!MESSAGE Boot project ADDED: sb-database-rollbased-user-authentication
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.144
+!MESSAGE Boot project ADDED: sb-form-based-authentication-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.158
+!MESSAGE Boot project ADDED: sb-inmemory-user-authentication
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.172
+!MESSAGE Boot project ADDED: sb-methodlevel-rollbased-user-authentication
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.176
+!MESSAGE Boot project ADDED: sb-oauth2-authentication-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.183
+!MESSAGE Boot project ADDED: sb-security-rollbased-app
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.188
+!MESSAGE Boot project ADDED: security
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.188
+!MESSAGE Boot project ADDED: sqs-producer-consumer-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.188
+!MESSAGE Boot project ADDED: sqs-producer-demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-10-04 13:19:20.188
+!MESSAGE Boot project ADDED: user
