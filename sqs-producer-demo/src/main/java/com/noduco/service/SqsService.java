@@ -5,6 +5,8 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.services.sqs.SqsClient;
 import software.amazon.awssdk.services.sqs.model.CreateQueueRequest;
@@ -58,6 +60,14 @@ public class SqsService {
 
 	    public String sendMessage(String queueUrl, String message) {
 	        queueMessagingTemplate.convertAndSend(queueUrl, message);
+	       return "Message sent to SQS: " + message;
+	    }
+	    
+	    public String sendMessage2(String queueUrl, String message) {
+	    	Message payload = MessageBuilder.withPayload(message)
+	    			.setHeader("Sender", "Chandani")
+	    			.build();
+	        queueMessagingTemplate.send(message, payload);;
 	       return "Message sent to SQS: " + message;
 	    }
 }
