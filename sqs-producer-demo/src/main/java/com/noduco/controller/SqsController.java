@@ -25,7 +25,7 @@ public class SqsController {
     @PostMapping("/queue/create-fifo")
     public String createFIFOQueue(@RequestParam String queueName) {
     	
-        return awsService.createQueue(queueName);
+        return awsService.createFIFOQueue(queueName);
     }
     
     // Send a message to SQS queue
