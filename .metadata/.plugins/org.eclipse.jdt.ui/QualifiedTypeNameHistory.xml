@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="org.springframework.kafka.core.KafkaTemplate"/>
-    <fullyQualifiedTypeName name="org.springframework.kafka.core.ConsumerFactory"/>
-    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.deser.std.StringDeserializer"/>
-    <fullyQualifiedTypeName name="org.springframework.kafka.core.DefaultKafkaConsumerFactory"/>
-    <fullyQualifiedTypeName name="com.noduco.config.KafkaConsumerConfig"/>
     <fullyQualifiedTypeName name="org.apache.kafka.clients.consumer.KafkaConsumer"/>
     <fullyQualifiedTypeName name="org.apache.kafka.clients.consumer.ConsumerConfig"/>
     <fullyQualifiedTypeName name="org.apache.kafka.common.serialization.StringDeserializer"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.aws.messaging.listener.annotation.SqsListener"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.aws.messaging.core.QueueMessagingTemplate"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.sqs.model.DeleteMessageRequest"/>
+    <fullyQualifiedTypeName name="software.amazon.awssdk.services.sqs.model.DeleteMessageRequest"/>
+    <fullyQualifiedTypeName name="software.amazon.awssdk.services.sqs.model.Message"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.sqs.model.Message"/>
+    <fullyQualifiedTypeName name="org.springframework.messaging.support.MessageBuilder"/>
+    <fullyQualifiedTypeName name="org.springframework.messaging.Message"/>
 </qualifiedTypeNameHistroy>
